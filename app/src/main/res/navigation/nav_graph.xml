@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/levelScreen">
+
+    <fragment
+        android:id="@+id/levelScreen"
+        android:name="uz.gita.memorygame_john.ui.screens.LevelScreen"
+        android:label="screen_level"
+        tools:layout="@layout/screen_level" >
+        <action
+            android:id="@+id/action_levelScreen_to_gameScreen"
+            app:destination="@id/gameScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameScreen"
+        android:name="uz.gita.memorygame_john.ui.screens.GameScreen"
+        android:label="GameScreen" >
+        <argument
+            android:name="level"
+            app:argType="uz.gita.memorygame_john.data.LevelEnum" />
+    </fragment>
+</navigation>
